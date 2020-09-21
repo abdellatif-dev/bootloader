@@ -11,7 +11,7 @@ asm:
 	cat $(BIN) $(BIN2) > $(OS)
 
 clear:
-	rm -rf $(BIN) $(BIN2) $(OS) *.iso
+	rm -rf bin/*
 
 run:
 	$(ASM) $(BOOT) -f bin -o $(BIN)
