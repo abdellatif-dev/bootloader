@@ -3,10 +3,7 @@
 jmp Enterprotecedmode
 
 %include "./src/lib/printf.asm"
-
-%include "./src/sector2+/paging.asm"
 %include "./src/sector2+/gdt.asm"
-%include "./src/sector2+/cpuid.asm"
 
 Enterprotecedmode:
     call EnableA20
@@ -27,6 +24,9 @@ EnableA20:
 
 [bits 32]
 
+%include "./src/sector2+/cpuid.asm"
+%include "./src/sector2+/paging.asm"
+
 Startprotecedmode:
     mov ax, dataseg
     mov ds, ax
@@ -38,6 +38,13 @@ Startprotecedmode:
     call DetectCPUid
     call Detectlongmode
     call setdetidentitypaging
+    call editgdt
+    jmp codeseg:Start64bit
+
+[bits 64]
+
+Start64bit:
+
     jmp $
 
 
