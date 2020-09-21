@@ -11,14 +11,14 @@
     ```
 
 ## install
-```sh
+``` console
 mkdir bin
-make  
+make 
 ```
 
 
 ## install and run
-```bash
+``` console
 mkdir bin
-make run 
+make run
 ```
