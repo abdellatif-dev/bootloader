@@ -11,7 +11,7 @@ call Read_Disk
 
 mov ah, 0x0e
 mov al, [SOFTWARE_SPACE]
-
+int 0x10
 jmp $
 
 %include "./src/sector1/lib/printf.asm"

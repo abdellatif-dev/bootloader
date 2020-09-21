@@ -19,4 +19,4 @@ run:
 	qemu-system-x86_64 $(OS)
 
 git:
-	git add makefile README.md src
+	git add -A
