@@ -11,7 +11,7 @@
     ```
 
 ## install
-    ``` sh
+    ``` console
     mkdir bin
     make 
     
@@ -19,7 +19,7 @@
 
 
 ## install and run
-    ```shell
+    ``` console
     mkdir bin
     make run
     
