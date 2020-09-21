@@ -11,7 +11,7 @@
     ```
 
 ## install
-    ```bash
+    ``` sh
     mkdir bin
     make 
     
