@@ -18,6 +18,3 @@ run:
 	cat $(BIN) $(BIN2) > $(OS)
 	qemu-system-x86_64 $(OS)
 
-git:
-	git add -A
-

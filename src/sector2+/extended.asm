@@ -5,6 +5,7 @@ jmp Enterprotecedmode
 %include "./src/lib/printf.asm"
 
 %include "./src/sector2+/gdt.asm"
+%include "./src/sector2+/cpuid.asm"
 
 Enterprotecedmode:
     call EnableA20
@@ -32,7 +33,9 @@ Startprotecedmode:
     mov es, ax
     mov fs, ax
     mov gs, ax
-
+    
+    call DetectCPUid
+    call Detectlongmode
     jmp $
 
 
