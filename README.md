@@ -14,13 +14,11 @@
 ``` console
 mkdir bin
 make 
-    
-    ```
+```
 
 
 ## install and run
 ``` console
 mkdir bin
 make run
-
 ```
