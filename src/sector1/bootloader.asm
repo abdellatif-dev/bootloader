@@ -7,10 +7,10 @@ mov sp, bp
 
 call Read_Disk
 
-jmp $
+jmp SOFTWARE_SPACE 
 
-%include "./src/sector1/lib/printf.asm"
-%include "./src/sector1/lib/diskread.asm"
+%include "./src/lib/printf.asm"
+%include "./src/lib/diskread.asm"
 
 times 510-($-$$) db 0
 dw 0xaa55

@@ -8,7 +8,7 @@ EXTENDED= ./src/sector2+/extended.asm
 asm:
 	$(ASM) $(BOOT) -f bin -o $(BIN)
 	$(ASM) $(EXTENDED) -f bin -o $(BIN2)
-	cat $(BIN) $(BIN2) > $OS
+	cat $(BIN) $(BIN2) > $(OS)
 
 clear:
 	rm -rf $(BIN) $(BIN2) $(OS)
@@ -20,3 +20,4 @@ run:
 
 git:
 	git add -A
+
