@@ -1,3 +1,5 @@
+[org 0x7c00]
+
 mov bp, 0x7c00
 mov sp, bp
 
