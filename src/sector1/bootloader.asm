@@ -1,18 +1,18 @@
 [org 0x7c00]
 
+mov [BOOT_DISK], dl
+
 mov bp, 0x7c00
 mov sp, bp
 
 mov bx, welcome
 call printf
+call Read_Disk
 
 jmp $
 
-printf:
-    mov ah, 0x0e
-    mov al, [bx]
-    int 0x10
-    ret
+%include "./src/sector1/lib/printf.asm"
+%include "./src/sector1/lib/diskread.asm"
 
 welcome: db 'welcome to TvOS',0
 
