@@ -4,6 +4,7 @@ jmp Enterprotecedmode
 
 %include "./src/lib/printf.asm"
 
+%include "./src/sector2+/paging.asm"
 %include "./src/sector2+/gdt.asm"
 %include "./src/sector2+/cpuid.asm"
 
@@ -36,6 +37,7 @@ Startprotecedmode:
     
     call DetectCPUid
     call Detectlongmode
+    call setdetidentitypaging
     jmp $
 
 
