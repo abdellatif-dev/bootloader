@@ -11,10 +11,13 @@ asm:
 	cat $(BIN) $(BIN2) > $(OS)
 
 clear:
-	rm -rf $(BIN) $(BIN2) $(OS)
+	rm -rf $(BIN) $(BIN2) $(OS) *.iso
+
 run:
 	$(ASM) $(BOOT) -f bin -o $(BIN)
 	$(ASM) $(EXTENDED) -f bin -o $(BIN2)
 	cat $(BIN) $(BIN2) > $(OS)
 	qemu-system-x86_64 $(OS)
 
+iso:
+	mkisofs -J -l -R -V "Label CD" -iso-level 4 -o system.iso bin/tv.bin
