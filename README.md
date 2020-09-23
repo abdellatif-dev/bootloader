@@ -6,7 +6,7 @@
     ```assembly
     jmp $
 
-    times 510-($-$$) db 10
+    times 510-($-$$) db 0
     dw 0x55aa
     ```
 
