@@ -2,7 +2,7 @@ ASM = nasm
 BOOT = src/sector1/bootloader.asm
 BIN= bin/bootloader.bin 
 BIN2 = bin/extended.bin
-OS = bin/tv.bin
+OS = bin/os.bin
 EXTENDED= ./src/sector2+/extended.asm
 
 asm:
